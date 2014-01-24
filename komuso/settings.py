@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'komuso',
     'score-editor',
 )
 
@@ -103,11 +104,4 @@ TEMPLATE_DIRS = (
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/static/'
-
-STATICFILES_DIRS = (
-    "static/img",
-    "static/css",
-    "static/js",
-    "static/font",
-)
+STATIC_ROOT = '{}/static'.format(BASE_DIR)
