@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from os import path
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -90,6 +91,7 @@ LANGUAGES = (
     ('en', 'Anglais'),
     ('ja', 'Japonais'),
 )
+PROJECT_ROOT = path.realpath(path.dirname(__file__) + '/..')
 
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
@@ -102,14 +104,9 @@ TEMPLATE_DIRS = (
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-
 STATIC_URL = '/static/'
-STATIC_ROOT = '/static/'
+STATIC_ROOT = '{}/static/'.format(PROJECT_ROOT)
 
 STATICFILES_DIRS = (
-    "static/img",
-    "static/css",
-    "static/js",
-    "static/font",
 
 )
