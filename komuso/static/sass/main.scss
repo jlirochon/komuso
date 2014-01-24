@@ -15,7 +15,7 @@
 
 html,body {
 	height:100%;
-	background: url('background.png');
+	background: url('../img/background.png');
 	overflow: hidden;
 }
 a {
@@ -31,7 +31,7 @@ ul {
 	display: block;
 	width: 30px;
 	height: 30px;
-	background: url('sprite.png') no-repeat;
+	background: url('../img/sprite.png') no-repeat;
 	text-indent: -9999px;
 
 	&.french{ background-position: 5px -30px; }
@@ -332,7 +332,7 @@ header {
 			    top: -4px;
 			    transition: transform 0.5s ease-in-out 0s;
 			    width: 45px;
-			    //background: url('bg-bubble.png');
+			    //background: url('../img/bg-bubble.png');
 
 
 
@@ -360,7 +360,7 @@ header {
 			 	border-bottom-color: #ccc; 
 			 	border-width: 0 7px 20px 7px;
 				margin-left: -8px; */
-				background: url('bg-bubble.png') no-repeat;
+				background: url('../img/bg-bubble.png') no-repeat;
 			    height: 18px;
 			    margin-left: -17px;
 			    width: 25px;
