@@ -27,9 +27,9 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 ADMINS = (
-  ('Laetitia Nanni', 'laetitia.nanni@gmail.com'),
-  ('Julie Po', 'pojulie07@gmail.com'),
-  ('Thibault Fievet', 'thibault.fievet@gmail.com'),
+    ('Laetitia Nanni', 'laetitia.nanni@gmail.com'),
+    ('Julie Po', 'pojulie07@gmail.com'),
+    ('Thibault Fievet', 'thibault.fievet@gmail.com'),
 )
 
 # Application definition
@@ -68,9 +68,9 @@ WSGI_APPLICATION = 'komuso.wsgi.application'
 
 DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.sqlite3',
-    'NAME': 'database.sql',
-  }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'database.sql',
+    }
 }
 
 # Internationalization
@@ -97,7 +97,7 @@ LOCALE_PATHS = (
 
 # Templates
 TEMPLATE_DIRS = (
-  "templates"
+    "templates"
 )
 
 # Static files (CSS, JavaScript, Images)
@@ -111,5 +111,4 @@ STATICFILES_DIRS = (
     "static/css",
     "static/js",
     "static/font",
-
 )
