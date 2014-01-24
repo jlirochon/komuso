@@ -66,15 +66,17 @@ ROOT_URLCONF = 'komuso.urls'
 WSGI_APPLICATION = 'komuso.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
+# Database (https://docs.djangoproject.com/en/1.6/ref/settings/#databases)
 
+# Parse database configuration from DATABASE_URL environment variable
+import dj_database_url
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'database.sql',
-    }
+    'default': dj_database_url.config()
 }
+# Defaults to sqlite database
+if not 'ENGINE' in DATABASES['default']:
+    DATABASES['default'] = dj_database_url.parse('sqlite:///{}/komuso.db'.format(BASE_DIR))
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
